@@ -78,13 +78,16 @@
 }
 
 .header__theme-menu-button:hover {
-  border: solid 1px #FF0070;
+  border: 1px solid rgba(255, 0, 112, 0.40)
 }
 
 .header__theme-menu-button:focus {
   border-bottom: solid 1px #FF0070;
 }
 
+.header__theme-menu-button_type_dark {
+  border: 1px solid #FF0070;
+}
 
 .header_title {
   width: 759px;
@@ -174,6 +177,14 @@ p {
   text-decoration: none;
   text-shadow: 2px 2px 0px #FF0070;
 
+}
+
+.link_in_the_text:hover {
+  border-bottom: 1px solid #F1B2CE;
+}
+
+.link_in_the_text:focus {
+  border: 1px solid #F1B2CE;
 }
 
 .answer_to_why {
