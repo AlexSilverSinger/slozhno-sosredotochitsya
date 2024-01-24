@@ -21,7 +21,7 @@
   width: 230px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 274.5px
+  margin-bottom: 280.5px
 }
 
 .header__theme-menu-list {
@@ -29,7 +29,7 @@
   display: grid;
   grid-template-columns: repeat(3, 70px);
   gap: 10px;
-  padding-top: 20px;
+  padding-top: 16px;
 }
 
 .header__theme-menu-item {
@@ -46,8 +46,8 @@
   font-style: normal;
   font-weight: 400;
   line-height: 25px;
-  top: 20px; 
-  right: 52px;
+  top: 16px; 
+  right: 48px;
 }
 
 .decoration_tag::after {
@@ -59,7 +59,7 @@
   background-color: #FF0070;
   position: absolute;
   top: 7px;
-  right: -23px;
+  right: -21px;
   box-shadow: 0px 0px 3px 3px #FF0070;
 }
 
@@ -86,7 +86,8 @@
 }
 
 .header__theme-menu-button_type_dark {
-  border: 1px solid #FF0070;
+  outline: 1px solid #FF0070;
+  outline-offset: 6px;
 }
 
 .header_title {
@@ -108,14 +109,14 @@
   border-top: 1px solid #FF0070;
   border-right: 1px solid #FF0070;
   position: absolute;
-  top: 20px;
+  top: 16px;
   right: 20px;
 }
 
 .header_text {
   display: block;
   max-width: 491px;
-  margin: 114px 20px 134px 571px;
+  margin: 112px 20px 134px 514px;
 }
 
 .header_text::after {
@@ -125,7 +126,7 @@
   border-bottom: 1px solid #FF0070;
   border-left: 1px solid #FF0070;
   position: absolute;
-  bottom: 20px;
+  bottom: 24px;
   left: 20px;
 }
 
@@ -164,12 +165,13 @@ p {
 .section_why {
   display: grid;
   grid-template-columns: 1fr, 2fr;
+  margin: 55px -8px 0 0;
   gap: 10px;
 }
 
 .title_why {
   grid-column: 1 / 2;
-  width: 314.96px;
+  width: 280.96px;
   justify-self: center;
 }
 
@@ -189,23 +191,36 @@ p {
 
 .answer_to_why {
   grid-column: 2 / 3;
-  width: 648.918px;
+  width: 655.918px;
   justify-self: center;
 }
 
+.text_why {
+  padding-top: 10px;
+}
+
+.subtitle_why-dofamin {
+  margin-top: 20px;
+}
+
 .section_what {
-  padding: 80px 20px;
+  margin: 80px 20px;
+  /* padding: 80px 20px; */
 }
 
 .title_what {
   width: 315px;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .answer_to_what {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+.text_what {
+  margin-top: -10px;
 }
 
 .subtitle_what_multitasking {
@@ -235,7 +250,8 @@ p {
 }
 
 .section_how {
-  padding: 80px 20px;
+  /* padding: 80px 20px; */
+  margin-left: 20px;
   display: grid;
   grid-template-columns: 1fr, 2fr;
   gap: 20px;
@@ -259,11 +275,13 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 23.4px;
+  /* margin-top: 15px; */
 }
 
 .section_picture {
   padding: 0 20px;
   display: grid;
+  margin-top: 31px;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   align-items: start;
