@@ -78,7 +78,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.40)
+  border: 1px solid rgba(255, 0, 112, 0.40);
 }
 
 .header__theme-menu-button:focus {
@@ -251,6 +251,7 @@ p {
 
 .section_how {
   /* padding: 80px 20px; */
+  padding-right: 17px;
   margin-left: 20px;
   display: grid;
   grid-template-columns: 1fr, 2fr;
