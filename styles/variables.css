@@ -3,11 +3,13 @@
   и их переопределение под различные устройства
 */
 :root {
-  --red: #FF0070;
-  --purple: #DB00FF;
-  --deep-red-transperent: rgba(255, 0, 112, 0.40);
-  --black: #000028;
-  --beige: #F1B2CE;
+  --accent-color: #FF0070;
+  --title-color: #DB00FF;
+  --focus-color: rgba(255, 0, 112, 0.40);
+  --background-color: #000028;
+  --text-color: #F1B2CE;
+  --subtitel-color: #000028;
+  
   --IBM-Plex-Mono: "IBM Plex Mono", sans-serif;
   --bold: 700;
   --regular: 400;

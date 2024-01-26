@@ -2,7 +2,7 @@
 
 .page {
   background-image: url(../images/cover-image-dark.png);
-  background-color: #000028;
+  background-color: var(--background-color);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,11 +40,11 @@
   position: absolute;
   width: 33px;
   height: 26px;
-  color: #FF0070;
-  font-family: "IBM Plex Mono", sans-serif;
-  font-size: 18px;
+  color: var(--red);
+  font-family: var(--IBM-Plex-Mono);
+  font-size: 23.4px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--regular);
   line-height: 25px;
   top: 16px; 
   right: 48px;
@@ -55,12 +55,12 @@
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  border: solid 1px #FF0070;
-  background-color: #FF0070;
+  border: solid 1px var(--accent-color);
+  background-color: var(--accent-color);
   position: absolute;
   top: 7px;
   right: -21px;
-  box-shadow: 0px 0px 3px 3px #FF0070;
+  box-shadow: 0px 0px 3px 3px var(--accent-color);
 }
 
 .header__theme-menu-button {
@@ -68,46 +68,46 @@
   border: none;
   cursor: pointer;
   overflow: hidden;
-  color: #FF0070;
+  color: var(--accent-color);
   text-align: center;
-  font-family: "IBM Plex Mono", sans-serif;
-  font-size: 18px;
+  font-family: var(--IBM-Plex-Mono);
+  font-size: var(--small-font);
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--regular);
   line-height: 18px
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.40);
+  border: 1px solid var(--focus-color);
 }
 
 .header__theme-menu-button:focus {
-  border-bottom: solid 1px #FF0070;
+  border-bottom: solid 1px var(--accent-color);
 }
 
 .header__theme-menu-button_type_dark {
-  outline: 1px solid #FF0070;
+  outline: 1px solid var(--accent-color);
   outline-offset: 6px;
 }
 
 .header_title {
   width: 759px;
   height: 130px;
-  color: #DB00FF;
-  text-shadow: 4px 4px 0px #FF0070;
-  font-family: "IBM Plex Mono", sans-serif;
-  font-size: 157px;
+  color: var(--title-color);
+  text-shadow: 4px 4px 0px var(--accent-color);
+  font-family: var(--IBM-Plex-Mono);
+  font-size: var(--big-font);
   font-style: normal;
-  font-weight: 700;
-  line-height: 82.5%;
+  font-weight: var(--bold);
+  line-height: var(--big-height);
 }
 
 .header_title::before {
   content: "";
   width: 25px;
   height: 25px;
-  border-top: 1px solid #FF0070;
-  border-right: 1px solid #FF0070;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
   position: absolute;
   top: 16px;
   right: 20px;
@@ -123,39 +123,39 @@
   content: "";
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid #FF0070;
-  border-left: 1px solid #FF0070;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
   position: absolute;
   bottom: 24px;
   left: 20px;
 }
 
 .title_decor {
-  color: #000028;
-  font-family: "IBM Plex Mono", sans-serif;
-  font-size: 18px;
+  color: var(--subtitel-color);
+  font-family: var(--IBM-Plex-Mono);
+  font-size: var(--small-font);
   font-style: normal;
-  font-weight: 700;
-  line-height: 23.4px;
-  background-color: #FF0070;
+  font-weight: var(--bold);
+  line-height: var(--small-heigh);
+  background-color: var(--accent-color);
 }
 
 .title_question {
-  color: #FF0070;
-  font-family: "IBM Plex Mono", sans-serif;
-  font-size: 18px;
+  color: var(--accent-color);
+  font-family: var(--IBM-Plex-Mono);
+  font-size: var(--small-font);
   font-style: normal;
-  font-weight: 700;
-  line-height: 23.4px;
+  font-weight: var(--bold);
+  line-height: var(--small-heigh);
 }
 
 p {
-  color: #F1B2CE;
-  font-family: "IBM Plex Mono", sans-serif;
-  font-size: 18px;
+  color: var(--text-color);
+  font-family: var(--IBM-Plex-Mono);
+  font-size: var(--small-font);
   font-style: normal;
-  font-weight: 400;
-  line-height: 23.4px;
+  font-weight: var(--regular);
+  line-height: var(--small-heigh);
 }
 
 .main_content {
@@ -177,16 +177,16 @@ p {
 
 .link_in_the_text {
   text-decoration: none;
-  text-shadow: 2px 2px 0px #FF0070;
+  text-shadow: 2px 2px 0px var(--accent-color);
 
 }
 
 .link_in_the_text:hover {
-  border-bottom: 1px solid #F1B2CE;
+  border-bottom: 1px solid var(--text-color);
 }
 
 .link_in_the_text:focus {
-  border: 1px solid #F1B2CE;
+  border: 1px solid var(--text-color);
 }
 
 .answer_to_why {
@@ -205,7 +205,6 @@ p {
 
 .section_what {
   margin: 80px 20px;
-  /* padding: 80px 20px; */
 }
 
 .title_what {
@@ -250,7 +249,6 @@ p {
 }
 
 .section_how {
-  /* padding: 80px 20px; */
   padding-right: 17px;
   margin-left: 20px;
   display: grid;
@@ -269,14 +267,13 @@ p {
 }
 
 .title_advice {
-  background-color: #FF0070;
-  color: #000028;
-  font-family: "IBM Plex Mono", sans-serif;
-  font-size: 18px;
+  background-color: var(--accent-color);
+  color: var(--subtitel-color);
+  font-family: var(--IBM-Plex-Mono);
+  font-size: var(--small-font);
   font-style: normal;
-  font-weight: 400;
-  line-height: 23.4px;
-  /* margin-top: 15px; */
+  font-weight: var(--regular);
+  line-height: var(--small-heigh);
 }
 
 .section_picture {
@@ -340,8 +337,8 @@ p {
   content: "";
   width: 25px;
   height: 25px;
-  border-top: 1px solid #FF0070;
-  border-right: 1px solid #FF0070;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
   position: absolute;
   top: 20px;
   right: 20px;
@@ -356,21 +353,21 @@ p {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  color: #DB00FF;
-  text-shadow: 2px 2px 0px #FF0070;
-  font-family: "IBM Plex Mono", sans-serif;
-  font-size: 157px;
+  color: var(--title-color);
+  text-shadow: 2px 2px 0px var(--accent-color);
+  font-family: var(--IBM-Plex-Mono);
+  font-size: var(--big-font);
   font-style: normal;
-  font-weight: 700;
-  line-height: 82.5%;
+  font-weight: var(--bold);
+  line-height: var(--big-height);
 }
 
 .footer_title::after {
   content: "";
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid #FF0070;
-  border-left: 1px solid #FF0070;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
   position: absolute;
   bottom: 20px;
   left: 20px;
