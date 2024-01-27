@@ -2,12 +2,21 @@
   Специально для светлой темы при наличии класса.
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
-*/
+*
+/* Остальные стили */
+
 
 .page.theme_light {
-  background-color: var(--beige);
+  background-color: #FFF1F7;;
   background-image: url(../images/cover-image-light.png);
-  
+  --accent-color: #FF8DCB;
+  --title-color: #FFC2E6;
+  --hover-color: rgba(50, 49, 45, 0.40);
+  --text-color: #000028;
+  --button-text-color: #000028;
+  --decoration-tag-color: transparent;
+  --main-title-color: #000028;
+
 
 
   /* сохраните этот селектор в приведённом виде.

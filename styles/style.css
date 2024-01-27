@@ -1,19 +1,19 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-image: url(../images/cover-image-dark.png);
+  background-image: url(../images/cover-image-dark.png); 
   background-color: var(--background-color);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 1024px;
   background-attachment: fixed;
+  margin-inline: 20px;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
 .header {
   width: 100%;
-  height: 768px;
   position: relative;
 }
 
@@ -21,7 +21,6 @@
   width: 230px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 280.5px
 }
 
 .header__theme-menu-list {
@@ -30,6 +29,7 @@
   grid-template-columns: repeat(3, 70px);
   gap: 10px;
   padding-top: 16px;
+  padding-left: 15px;
 }
 
 .header__theme-menu-item {
@@ -40,27 +40,27 @@
   position: absolute;
   width: 33px;
   height: 26px;
-  color: var(--red);
+  color: var(--decoration-tag-color);
   font-family: var(--IBM-Plex-Mono);
-  font-size: 23.4px;
+  font-size: 18px;
   font-style: normal;
   font-weight: var(--regular);
   line-height: 25px;
-  top: 16px; 
-  right: 48px;
+  top: 14px;
+  right: 14px;
 }
 
 .decoration_tag::after {
   content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  border: solid 1px var(--accent-color);
-  background-color: var(--accent-color);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: solid 1px var(--decoration-tag-color);
+  background-color: var(--decoration-tag-color);
   position: absolute;
-  top: 7px;
-  right: -21px;
-  box-shadow: 0px 0px 3px 3px var(--accent-color);
+  top: 8px;
+  right: -16px;
+  box-shadow: 0px 0px 3px 3px var(--decoration-tag-color);
 }
 
 .header__theme-menu-button {
@@ -68,7 +68,7 @@
   border: none;
   cursor: pointer;
   overflow: hidden;
-  color: var(--accent-color);
+  color: var(--button-text-color);
   text-align: center;
   font-family: var(--IBM-Plex-Mono);
   font-size: var(--small-font);
@@ -78,23 +78,21 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--focus-color);
+  outline: 1px solid var(--hover-color);
+  outline-offset: 6px;
 }
 
 .header__theme-menu-button:focus {
   border-bottom: solid 1px var(--accent-color);
 }
 
-.header__theme-menu-button_type_dark {
-  outline: 1px solid var(--accent-color);
-  outline-offset: 6px;
-}
-
 .header_title {
   width: 759px;
-  height: 130px;
+  min-height: 130px;
+  padding-top: 280px;
+  margin-left: -20px;
   color: var(--title-color);
-  text-shadow: 4px 4px 0px var(--accent-color);
+  text-shadow: 4px 4px 0px var(--title-shadow);
   font-family: var(--IBM-Plex-Mono);
   font-size: var(--big-font);
   font-style: normal;
@@ -106,28 +104,28 @@
   content: "";
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--button-text-color);
+  border-right: 1px solid var(--button-text-color);
   position: absolute;
-  top: 16px;
-  right: 20px;
+  top: 14px;
+  right: -14px;
 }
 
-.header_text {
-  display: block;
-  max-width: 491px;
-  margin: 112px 20px 134px 514px;
+.header_text-box {
+  display: flex;
+  min-width: 491px;
+  padding: 113px 0 134px 494px;
 }
 
-.header_text::after {
+.header_text-box::after {
   content: "";
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--button-text-color);
+  border-left: 1px solid var(--button-text-color);
   position: absolute;
-  bottom: 24px;
-  left: 20px;
+  bottom: 42px;
+  left: 0px;
 }
 
 .title_decor {
@@ -141,7 +139,7 @@
 }
 
 .title_question {
-  color: var(--accent-color);
+  color: var(--main-title-color);
   font-family: var(--IBM-Plex-Mono);
   font-size: var(--small-font);
   font-style: normal;
@@ -163,15 +161,16 @@ p {
 }
 
 .section_why {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr, 2fr;
-  margin: 55px -8px 0 0;
-  gap: 10px;
+  margin: 38px 0;
+  gap: 20px;
 }
 
 .title_why {
   grid-column: 1 / 2;
-  width: 280.96px;
+  max-width: 315px;
   justify-self: center;
 }
 
@@ -191,7 +190,6 @@ p {
 
 .answer_to_why {
   grid-column: 2 / 3;
-  width: 655.918px;
   justify-self: center;
 }
 
@@ -199,12 +197,8 @@ p {
   padding-top: 10px;
 }
 
-.subtitle_why-dofamin {
-  margin-top: 20px;
-}
-
 .section_what {
-  margin: 80px 20px;
+  padding-top: 43px;
 }
 
 .title_what {
@@ -249,11 +243,10 @@ p {
 }
 
 .section_how {
-  padding-right: 17px;
-  margin-left: 20px;
   display: grid;
   grid-template-columns: 1fr, 2fr;
-  gap: 20px;
+  gap: 16px;
+  padding-top: 61px;
 }
 
 .title_how {
@@ -277,9 +270,8 @@ p {
 }
 
 .section_picture {
-  padding: 0 20px;
   display: grid;
-  margin-top: 31px;
+  padding-top: 70px;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   align-items: start;
@@ -301,6 +293,7 @@ p {
   grid-area: sunset;
   width: 100%;
   height: 260px;
+  object-fit: cover;
 }
 
 .icecream {
@@ -321,15 +314,18 @@ p {
   grid-area: book;
   width: 100%;
   height: 315px;
+  object-fit: cover;
 }
 
 .street {
   grid-area: street;
   width: 100%;
-  height: 428px;
+  height: 433px;
+  object-fit: cover;
 }
 
 .footer {
+  width: 100%;
   position: relative;
 }
 
@@ -337,22 +333,19 @@ p {
   content: "";
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--button-text-color);
+  border-right: 1px solid var(--button-text-color);
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 81px;
+  right: -14px;
 }
 
 .footer_title {
   display: flex;
-  width: 1024px;
-  height: 768px;
-  padding: 20px;
-  flex-direction: column;
+  width: 100%;
   justify-content: center;
-  align-items: center;
-  gap: 10px;
+  padding-top: 381px;
+  padding-left: 14px;
   color: var(--title-color);
   text-shadow: 2px 2px 0px var(--accent-color);
   font-family: var(--IBM-Plex-Mono);
@@ -366,9 +359,252 @@ p {
   content: "";
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--button-text-color);
+  border-left: 1px solid var(--button-text-color);
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: -300px;
+  left: 0px;
+}
+
+@media (max-width: 768px) {
+
+  .page {
+    max-width: 768px;
+  }
+
+  .header__theme-menu {
+  margin: 0;
+  padding-left: 651px;
+  padding-top: 299px;
+}
+
+.header__theme-menu-list{
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.decoration_tag {
+  top: 145px;
+  right: 27px;
+}
+
+.header_title::before {
+  top: 144px;
+  right: 0px;
+}
+
+.header_title {
+  padding-top: 173px;
+  font-size: var(--medium-font);
+}
+
+.header_text-box {
+  padding: 163px 0 134px 365px;
+}
+
+.header_text-box::after {
+  bottom: -54px;
+}
+
+.section_why {
+  margin-top: 133px;
+  margin-bottom: 85px;
+}
+
+.title_why {
+  max-width: 239px;
+}
+
+.subtitle_why-dofamin {
+  margin-top: 25px;
+}
+
+.title_what {
+  padding-bottom: 42px;
+}
+
+.answer_to_what {
+  display: flex;
+  flex-direction: column;
+}
+
+.section_what {
+  padding-top: 2px;
+}
+
+.section_how {
+  gap: 18px;
+  padding-top: 88px;
+}
+
+.title_how {
+  width: 240px;
+}
+
+.section_picture {
+  padding-top: 70px;
+}
+
+.sunset {
+  height: 194px;
+}
+
+.icecream {
+  height: 442px;
+}
+
+.tape {
+  height: 566px;
+}
+
+.book {
+  height: 227px;
+}
+
+.street {
+  height: 317px;
+}
+
+.footer_title::before {
+  top: 80px;
+  right: 0px;
+}
+
+.footer_title {
+  font-size: var(--medium-font);
+  padding-top: 523px;
+  padding-left: 1px;
+}
+
+.footer_title::after {
+  bottom: -442px;
+}
+
+}
+
+@media (max-width: 375px) {
+  .page {
+    width: 375px;
+    margin: -10px 10px;
+  }
+
+  .header_title::before {
+    top: 33px;
+    right: 22px;
+  }
+
+  .header_title {
+    width: 100%;
+    margin-left: 0;
+    padding-top: 67px
+  }
+
+  .header_text-box {
+    padding: 49px 0;
+  }
+
+  .header_text {
+    max-width: 355px;
+  }
+
+  .header_text-box::after {
+    bottom: -32px;
+  }
+
+  .header__theme-menu {
+    padding-left: 277px;
+    padding-top: 80px;
+  }
+
+  .decoration_tag {
+    top: 32px;
+    right: 46px;
+  }
+
+  .title_why {
+    margin-bottom: 20px;
+  }
+
+   .section_why {
+    display: block;
+    margin-top: 81px;
+    margin-bottom: 76px;
+  }
+
+  .subtitle_why-dofamin {
+    margin-top: 52px;
+  }
+
+  .title_what {
+    padding-bottom: 24px;
+  }
+
+  .subtitle_what_multitasking {
+    margin-bottom: 24px; 
+  }
+
+  .subtitle_what_food {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .subtitle_what_gadjet {
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+
+  .answer_to_what {
+    display: block;
+  }
+
+  .section_how  {
+    display: block;
+    padding-top: 77px;
+  }
+
+  .title_advice {
+    margin-top: 30px;
+    margin-bottom: 38px;
+  }
+
+  .section_picture {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 17px;
+  }
+
+  .sunset {
+    height: 148px;
+  }
+  
+  .icecream {
+    height: 356px;
+  }
+  
+  .tape {
+    height: 232px;
+  }
+  
+  .book {
+    height: 359px;
+  }
+  
+  .street {
+    height: 236px;
+  }
+
+  .footer_title::before {
+    top: 51px;
+    right: 19px;
+  }
+
+  .footer_title {
+    padding-top: 325px;
+  } 
+
+  .footer_title::after {
+    bottom: -275px;
+  }
 }
