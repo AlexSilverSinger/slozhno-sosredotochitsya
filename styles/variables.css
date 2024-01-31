@@ -3,23 +3,25 @@
   и их переопределение под различные устройства
 */
 :root {
-  --accent-color: #FF0070;
-  --title-color: #DB00FF;
-  --title-shadow: #FF0070;
-  --hover-color: rgba(255, 0, 112, 0.40);
+  --accent-color: #ff0070;
+  --shadow-color: #ff0070;
+  --focus-color: #ff0070;
+  --title-color: #db00ff;
+  --title-shadow: #ff0070;
+  --hover-color: rgba(255, 0, 112, 0.4);
   --background-color: #000028;
-  --text-color: #F1B2CE;
+  --text-color: #f1b2ce;
   --subtitel-color: #000028;
-  --button-text-color: #FF0070;
-  --decoration-tag-color: #FF0070;
-  --main-title-color: #FF0070;
-  
-  --IBM-Plex-Mono: "IBM Plex Mono", sans-serif;
+  --button-text-color: #ff0070;
+  --decoration-tag-color: #ff0070;
+  --main-title-color: #ff0070;
+
+  --IBM-Plex-Mono: "IBM Plex Mono";
   --bold: 700;
   --regular: 400;
   --small-height: 23.4px;
   --big-height: 82.5%;
-  --small-font: 18px;
-  --medium-font: 120px;
-  --big-font: 157px;
+  --text-font-size: 18px;
+  --small-font_header: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --big-font_header: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 }

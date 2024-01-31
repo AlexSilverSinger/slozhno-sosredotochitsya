@@ -4,20 +4,31 @@
   переключая тему
 *
 /* Остальные стили */
-
-
-.page.theme_light {
-  background-color: #FFF1F7;;
-  background-image: url(../images/cover-image-light.png);
-  --accent-color: #FF8DCB;
-  --title-color: #FFC2E6;
-  --hover-color: rgba(50, 49, 45, 0.40);
+:root.theme_light {
+  --accent-color: #ff8dcb;
+  --title-color: #ffc2e6;
+  --hover-color: rgba(50, 49, 45, 0.4);
   --text-color: #000028;
   --button-text-color: #000028;
   --decoration-tag-color: transparent;
   --main-title-color: #000028;
+  --background-color: #fff1f7;
+}
 
-
+.page.theme_light {
+  --accent-color: #ff8dcb;
+  --title-color: #ffc2e6;
+  --focus-color: #353430;
+  --shadow-color: #ff0070;
+  --hover-color: rgba(50, 49, 45, 0.4);
+  --text-color: #000028;
+  --subtitel-color: #353430;
+  --button-text-color: #000028;
+  --decoration-tag-color: transparent;
+  --main-title-color: #000028;
+  --background-color: #fff1f7;
+  background-color: var(--background-color);
+  background-image: url(../images/cover-image-light.png);
 
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
@@ -25,3 +36,29 @@
   */
 }
 
+@media (max-width: 768px) {
+  .footer_title {
+    --shadow-color: #ff8dcb;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer_title {
+    --shadow-color: #ff8dcb;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #ff8dcb;
+    --title-color: #ffc2e6;
+    --hover-color: rgba(50, 49, 45, 0.4);
+    --text-color: #000028;
+    --button-text-color: #000028;
+    --decoration-tag-color: transparent;
+    --main-title-color: #000028;
+    --background-color: #fff1f7;
+    background-color: var(--background-color);
+    background-image: url(../images/cover-image-light.png);
+  }
+}
