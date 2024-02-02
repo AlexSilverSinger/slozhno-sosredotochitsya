@@ -1,8 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background: var(--background-color) no-repeat center / cover;
-  background-image: url(../images/cover-image-dark.png);
   max-width: 1024px;
   background-attachment: fixed;
   margin: 0 auto;
@@ -28,13 +26,6 @@
   min-height: 728px;
   width: 100%;
   position: relative;
-}
-
-.header__theme-menu {
-  max-height: 27px;
-  padding-top: 2px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .header__theme-menu-list {
@@ -63,7 +54,7 @@
 
 .header__theme-menu-button:hover {
   outline: 1px solid var(--hover-color);
-  outline-offset: 6px;
+  outline-offset: 1px;
 }
 
 .header__theme-menu-button_active:active {
@@ -117,8 +108,8 @@
 
 .header_text-box {
   max-width: 491px;
-  padding-top: 77px;
-  margin-left: 493px;
+  justify-self: end;
+  align-self: center;
 }
 
 .header_text {
@@ -281,7 +272,7 @@ p {
 .title_advice {
   background-color: var(--accent-color);
   color: var(--subtitel-color);
-  font-family: var(--IBM-Plex-Mono);
+  font-family: var(--IBM-Plex-Mono), monospace;
   font-size: 18px;
   font-style: normal;
   font-weight: var(--regular);
@@ -353,22 +344,21 @@ p {
   width: 100%;
   color: var(--title-color);
   text-shadow: 2px 2px 0px var(--shadow-color);
-  font-family: var(--IBM-Plex-Mono);
+  font-family: var(--IBM-Plex-Mono), monospace;
   font-size: var(--big-font_header);
   font-style: normal;
   font-weight: var(--bold);
   line-height: var(--big-height);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .header {
     min-height: 984px;
   }
 
   .header__theme-menu {
-    margin: 0;
-    padding-left: 658px;
-    padding-top: 173px;
+    justify-self: end;
+    align-self: center;
   }
 
   .header__theme-menu-list {
@@ -387,9 +377,7 @@ p {
   }
 
   .header_text-box {
-    padding-top: 135px;
-    margin-left: 319px;
-    padding-left: 46px;
+    max-width: 364px;
   }
 
   .section_why {
@@ -457,7 +445,7 @@ p {
     font-size: var(--small-font_header);
   }
 }
-@media(max-width: 375px) {
+@media (max-width: 767px) {
   .page {
     padding: 10px;
   }
@@ -469,16 +457,6 @@ p {
   .header_title {
     padding-left: 20px;
     line-height: var(--big-height);
-  }
-
-  .header_text-box {
-    margin-left: 0;
-    padding: 57px 0 0;
-  }
-
-  .header__theme-menu {
-    padding-left: 285px;
-    padding-top: 66px;
   }
 
   .main_content {
@@ -551,19 +529,11 @@ p {
     min-height: 236px;
   }
 
-  .decorated-zone::before {
-    top: -45px;
-  }
-
   .footer {
     min-height: 647px;
   }
 
   .footer_title {
     margin-bottom: 90px;
-  }
-
-  .decorated-zone::after {
-    bottom: 45px;
   }
 }

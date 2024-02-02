@@ -14,6 +14,8 @@
   --button-text-color: #ff0070;
   --decoration-tag-color: #ff0070;
   --main-title-color: #ff0070;
+  background-color: var(--background-color) no-repeat center / cover;
+  --background-image-dark: var(--background-image-dark);
 }
 
 .page.theme_dark {
@@ -27,11 +29,28 @@
   --button-text-color: #ff0070;
   --decoration-tag-color: #ff0070;
   --main-title-color: #ff0070;
-  background-image: url(../images/cover-image-dark.png);
-  background-color: var(--background-color);
+  background-color: var(--background-color) no-repeat center / cover;
+  background-image: var(--background-image-dark);
 
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #ff0070;
+    --title-color: #db00ff;
+    --title-shadow: #ff0070;
+    --hover-color: rgba(255, 0, 112, 0.4);
+    --background-color: #000028;
+    --text-color: #f1b2ce;
+    --subtitel-color: #000028;
+    --button-text-color: #ff0070;
+    --decoration-tag-color: #ff0070;
+    --main-title-color: #ff0070;
+    background-color: var(--background-color) no-repeat center / cover;
+    background-image: var(--background-image-dark);
+  }
 }

@@ -7,12 +7,17 @@
 :root.theme_light {
   --accent-color: #ff8dcb;
   --title-color: #ffc2e6;
+  --focus-color: #353430;
+  --shadow-color: #ff0070;
   --hover-color: rgba(50, 49, 45, 0.4);
   --text-color: #000028;
+  --subtitel-color: #353430;
   --button-text-color: #000028;
   --decoration-tag-color: transparent;
   --main-title-color: #000028;
   --background-color: #fff1f7;
+  --background-color: var(--background-color);
+  --background-image: var(url(../images/cover-image-light.png) ;);
 }
 
 .page.theme_light {
@@ -27,8 +32,8 @@
   --decoration-tag-color: transparent;
   --main-title-color: #000028;
   --background-color: #fff1f7;
-  background-color: var(--background-color);
-  background-image: url(../images/cover-image-light.png);
+  background-color: var(--background-color) no-repeat center / cover;
+  background-image: var(--background-image-light);
 
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
@@ -36,29 +41,32 @@
   */
 }
 
-@media (max-width: 768px) {
-  .footer_title {
-    --shadow-color: #ff8dcb;
-  }
-}
-
-@media (max-width: 375px) {
-  .footer_title {
-    --shadow-color: #ff8dcb;
-  }
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: #ff8dcb;
     --title-color: #ffc2e6;
+    --focus-color: #353430;
+    --shadow-color: #ff0070;
     --hover-color: rgba(50, 49, 45, 0.4);
     --text-color: #000028;
+    --subtitel-color: #353430;
     --button-text-color: #000028;
     --decoration-tag-color: transparent;
     --main-title-color: #000028;
-    --background-color: #fff1f7;
-    background-color: var(--background-color);
-    background-image: url(../images/cover-image-light.png);
+    background-attachment: fixed;
+    background-color: var(--background-color) no-repeat center / cover;
+    background-image: var(--background-image-light);
+  }
+}
+
+@media (max-width: 1023px) {
+  .footer_title {
+    --shadow-color: #ff8dcb;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer_title {
+    --shadow-color: #ff8dcb;
   }
 }
