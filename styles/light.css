@@ -5,19 +5,7 @@
 *
 /* Остальные стили */
 :root.theme_light {
-  --accent-color: #ff8dcb;
-  --title-color: #ffc2e6;
-  --focus-color: #353430;
-  --shadow-color: #ff0070;
-  --hover-color: rgba(50, 49, 45, 0.4);
-  --text-color: #000028;
-  --subtitel-color: #353430;
-  --button-text-color: #000028;
-  --decoration-tag-color: transparent;
-  --main-title-color: #000028;
-  --background-color: #fff1f7;
-  --background-color: var(--background-color);
-  --background-image: var(url(../images/cover-image-light.png) ;);
+  
 }
 
 .page.theme_light {
@@ -26,14 +14,12 @@
   --focus-color: #353430;
   --shadow-color: #ff0070;
   --hover-color: rgba(50, 49, 45, 0.4);
-  --text-color: #000028;
+  --text-color: #353430;
   --subtitel-color: #353430;
-  --button-text-color: #000028;
+  --button-text-color: #353430;
   --decoration-tag-color: transparent;
-  --main-title-color: #000028;
-  --background-color: #fff1f7;
-  background-color: var(--background-color) no-repeat center / cover;
-  background-image: var(--background-image-light);
+  --main-title-color: #353430;
+  --background: #fff1f7 url(../images/cover-image-light.png) no-repeat center / cover;
 
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
@@ -53,9 +39,7 @@
     --button-text-color: #000028;
     --decoration-tag-color: transparent;
     --main-title-color: #000028;
-    background-attachment: fixed;
-    background-color: var(--background-color) no-repeat center / cover;
-    background-image: var(--background-image-light);
+    --background: #fff1f7 url(../images/cover-image-light.png) no-repeat center / cover;
   }
 }
 

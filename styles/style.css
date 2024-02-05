@@ -5,6 +5,7 @@
   background-attachment: fixed;
   margin: 0 auto;
   padding: 20px;
+  background: var(--background);
 
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
@@ -21,7 +22,7 @@
 }
 .header {
   display: grid;
-  grid-template-rows: 1fr min-content 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   block-size: 100vh;
   min-height: 728px;
   width: 100%;
@@ -57,7 +58,7 @@
   outline-offset: 1px;
 }
 
-.header__theme-menu-button_active:active {
+.header__theme-menu-button_active {
   pointer-events: none;
 }
 
@@ -97,7 +98,8 @@
 
 .header_title {
   max-width: 759px;
-  margin-inline-start: -20px;
+  margin-inline-start: -21px;
+  margin-top: 4px;
   color: var(--title-color);
   text-shadow: 4px 4px 0px var(--title-shadow);
   font-family: var(--IBM-Plex-Mono), monospace;
@@ -106,28 +108,23 @@
   font-weight: var(--bold);
 }
 
-.header_text-box {
+.header_subtitle-box {
   max-width: 491px;
   justify-self: end;
-  align-self: center;
+  margin-top: 30px;
 }
 
-.header_text {
-  font-family: var(--IBM-Plex-Mono), monospace;
-  font-size: var(--text-font-size);
-  font-weight: var(--bold);
-}
-
-.title_decor {
+.subtitle_decor {
   color: var(--subtitel-color);
   font-family: var(--IBM-Plex-Mono), monospace;
   font-style: normal;
+  font-size: var(--text-font-size);
   font-weight: var(--bold);
   line-height: var(--small-heigh);
   background-color: var(--accent-color);
 }
 
-.title_question {
+.title_question-decor {
   color: var(--main-title-color);
   font-family: var(--IBM-Plex-Mono), monospace;
   font-size: var(--text-font-size);
@@ -136,7 +133,7 @@
   line-height: var(--small-heigh);
 }
 
-p {
+.text-answer {
   color: var(--text-color);
   font-family: var(--IBM-Plex-Mono), monospace;
   font-size: var(--text-font-size);
@@ -152,13 +149,13 @@ p {
   border-bottom: 1px solid var(--button-text-color);
   border-left: 1px solid var(--button-text-color);
   position: absolute;
-  bottom: 0px;
+  bottom: 40px;
   left: 0px;
 }
 
 .main_content {
   width: 100%;
-  margin-top: 80px;
+  margin-top: 38px;
 }
 
 .section_why {
@@ -172,7 +169,6 @@ p {
 .title_why {
   grid-column: 1 / 2;
   max-width: 315px;
-  justify-self: center;
 }
 
 .link_in_the_text {
@@ -194,7 +190,6 @@ p {
 
 .answer_to_why {
   grid-column: 2 / 3;
-  justify-self: center;
 }
 
 .text_why {
@@ -203,7 +198,7 @@ p {
 }
 
 .section_what {
-  margin-top: 60px;
+  margin-top: 63px;
 }
 
 .title_what {
@@ -257,19 +252,16 @@ p {
 .title_how {
   width: 315px;
   grid-column: 1 / 2;
-  grid-row: 1 / 7;
 }
 
-.subtitle_how {
+.block_advice {
+  display: grid;
+  gap: 12px;
   grid-column: 2 / 3;
 }
 
-.text_how {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
 .title_advice {
+  margin-top: 7px;
   background-color: var(--accent-color);
   color: var(--subtitel-color);
   font-family: var(--IBM-Plex-Mono), monospace;
@@ -287,11 +279,12 @@ p {
   max-width: 100%;
   min-height: 100%;
   display: grid;
-  padding-top: 20px;
+  margin-top: 77px;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   align-items: start;
   grid-template-areas:
+    "subtitel_picture subtitel_picture subtitel_picture"
     "sunset sunset icecream"
     "tape book icecream"
     "tape street street";
@@ -304,9 +297,15 @@ p {
 }
 
 .image_gallery {
+  display: block;
   max-width: 100%;
+  min-width: 100%;
   min-height: 100%;
   object-fit: cover;
+}
+
+.subtitel_picture {
+  grid-area: subtitel_picture;
 }
 
 .sunset {
@@ -333,15 +332,14 @@ p {
   width: 100%;
   display: flex;
   height: 100vh;
-  margin-top: 80px;
-  min-height: 728px;
+  margin-top: 81px;
   position: relative;
   text-align: center;
-  align-items: center;
 }
 
 .footer_title {
   width: 100%;
+  padding-top: 299px;
   color: var(--title-color);
   text-shadow: 2px 2px 0px var(--shadow-color);
   font-family: var(--IBM-Plex-Mono), monospace;
@@ -352,13 +350,9 @@ p {
 }
 
 @media (max-width: 1023px) {
-  .header {
-    min-height: 984px;
-  }
-
   .header__theme-menu {
-    justify-self: end;
-    align-self: center;
+    padding-left: 657px;
+    padding-top: 173px;
   }
 
   .header__theme-menu-list {
@@ -367,17 +361,19 @@ p {
     flex-direction: column;
   }
 
-  .header_title::before {
-    top: 144px;
-    right: 0px;
-  }
-
   .header_title {
+    margin-top: 69px;
     font-size: var(--small-font_header);
   }
 
-  .header_text-box {
+  .header_subtitle-box {
     max-width: 364px;
+    justify-self: end;
+    margin-top: 21px;
+  }
+
+  .main_content {
+    margin-top: 40px;
   }
 
   .section_why {
@@ -393,7 +389,7 @@ p {
   }
 
   .title_what {
-    padding-bottom: 42px;
+    max-width: 231px;
   }
 
   .answer_to_what {
@@ -402,46 +398,19 @@ p {
   }
 
   .section_what {
-    margin-top: 80px;
+    margin-top: 84px;
   }
 
   .section_how {
-    gap: 13px;
+    gap: 16px;
   }
 
   .title_how {
     width: 240px;
   }
 
-  .section_picture {
-    padding-top: 16px;
-  }
-
-  .sunset {
-    min-height: 194px;
-  }
-
-  .icecream {
-    min-height: 442px;
-  }
-
-  .tape {
-    min-height: 566px;
-  }
-
-  .book {
-    min-height: 227px;
-  }
-
-  .street {
-    min-height: 317px;
-  }
-
-  .footer {
-    min-height: 984px;
-  }
-
   .footer_title {
+    padding-top: 446px;
     font-size: var(--small-font_header);
   }
 }
@@ -451,12 +420,26 @@ p {
   }
 
   .header {
-    min-height: 648px;
+    min-height: 668px;
+  }
+
+  .header__theme-menu {
+    padding-left: 284px;
+    padding-top: 66px;
   }
 
   .header_title {
+    margin-top: 6px;
     padding-left: 20px;
     line-height: var(--big-height);
+  }
+
+  .header_subtitle-box {
+    margin-top: 30px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
   }
 
   .main_content {
@@ -464,26 +447,31 @@ p {
   }
 
   .title_why {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
   }
 
   .section_why {
     display: block;
-    margin-top: 50px;
+    margin-top: 30px;
+  }
+
+  .subtitle_why-dofamin {
+    margin-top: 20px;
   }
 
   .section_what {
-    margin-top: 50px;
+    margin-top: 51px;
   }
 
   .title_what {
-    padding-bottom: 24px;
+    min-width: 269px;
+    padding-bottom: 21px;
   }
 
   .section_how {
     display: flex;
     flex-direction: column;
-    padding-top: 47px;
+    padding-top: 50px;
     gap: 20px;
   }
 
@@ -491,7 +479,12 @@ p {
     width: 100%;
   }
 
+  .block_advice {
+    display: block;
+  }
+
   .title_advice {
+    margin-top: 21px;
     margin-bottom: 10px;
   }
 
@@ -505,35 +498,16 @@ p {
 
   .section_picture {
     display: flex;
+    margin-top: 49px;
     flex-direction: column;
     gap: 10px;
   }
 
-  .sunset {
-    min-height: 148px;
-  }
-
-  .icecream {
-    min-height: 356px;
-  }
-
-  .tape {
-    min-height: 232px;
-  }
-
-  .book {
-    min-height: 359px;
-  }
-
-  .street {
-    min-height: 236px;
-  }
-
   .footer {
-    min-height: 647px;
+    margin-top: 52px;
   }
 
   .footer_title {
-    margin-bottom: 90px;
+    padding-top: 277px;
   }
 }
