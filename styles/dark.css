@@ -3,9 +3,6 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme_dark {
-
-}
 
 .page.theme_dark {
   --accent-color: #ff0070;
@@ -18,7 +15,7 @@
   --button-text-color: #ff0070;
   --decoration-tag-color: #ff0070;
   --main-title-color: #ff0070;
-  --background: #000028 url(../images/cover-image-dark.png) no-repeat center / cover;
+  --background: #000028 url(../images/cover-image-dark.png) fixed no-repeat center / cover;
 
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,

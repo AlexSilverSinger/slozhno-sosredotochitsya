@@ -4,9 +4,6 @@
   переключая тему
 *
 /* Остальные стили */
-:root.theme_light {
-  
-}
 
 .page.theme_light {
   --accent-color: #ff8dcb;
@@ -19,7 +16,7 @@
   --button-text-color: #353430;
   --decoration-tag-color: transparent;
   --main-title-color: #353430;
-  --background: #fff1f7 url(../images/cover-image-light.png) no-repeat center / cover;
+  --background: #fff1f7 url(../images/cover-image-light.png) fixed no-repeat center / cover;
 
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
